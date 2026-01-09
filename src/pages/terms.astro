@@ -1,0 +1,101 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Terms of Service - Buds" description="Terms of Service for Buds app">
+  <div class="min-h-screen bg-white">
+    <!-- Header -->
+    <header class="bg-gradient-to-br from-primary-50 to-secondary-50 py-16">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <a
+          href="/"
+          class="inline-flex items-center text-primary-600 hover:text-primary-700 mb-8 transition-colors duration-200"
+        >
+          <svg
+            class="w-5 h-5 mr-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M10 19l-7-7m0 0l7-7m-7 7h18"
+            ></path>
+          </svg>
+          Back to Home
+        </a>
+        <h1 class="text-4xl md:text-5xl font-bold text-neutral-900">Terms of Service</h1>
+        <p class="text-neutral-600 mt-4">Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="prose prose-lg max-w-none">
+        <div
+          class="bg-secondary-50 border-l-4 border-secondary-500 p-6 mb-8 rounded-r-lg"
+        >
+          <p class="text-neutral-700 mb-0">
+            <strong>Beta Terms:</strong> Buds is currently in private beta. By participating, you
+            acknowledge that the app is under active development and may contain bugs or change
+            significantly before public release.
+          </p>
+        </div>
+
+        <h2>Coming Soon</h2>
+        <p>
+          We're currently preparing our comprehensive terms of service. During the beta period,
+          please note:
+        </p>
+
+        <h2>Beta Program</h2>
+        <ul>
+          <li>The app is provided "as is" during beta testing</li>
+          <li>Features may change or be removed without notice</li>
+          <li>We may reset or modify data during testing</li>
+          <li>Beta access may be revoked at any time</li>
+        </ul>
+
+        <h2>Acceptable Use</h2>
+        <p>By using Buds, you agree to:</p>
+        <ul>
+          <li>Use the app only for its intended purpose (sharing memories with friends)</li>
+          <li>Not share illegal, harmful, or offensive content</li>
+          <li>Not attempt to hack, reverse engineer, or abuse the service</li>
+          <li>Respect the privacy and rights of other users</li>
+        </ul>
+
+        <h2>Your Content</h2>
+        <ul>
+          <li>You retain all rights to the content you upload</li>
+          <li>You're responsible for the content you share</li>
+          <li>You grant us permission to store and transmit your encrypted content</li>
+          <li>You can delete your content at any time</li>
+        </ul>
+
+        <h2>Account Termination</h2>
+        <p>
+          We reserve the right to suspend or terminate accounts that violate these terms or engage
+          in abusive behavior.
+        </p>
+
+        <h2>Changes to Service</h2>
+        <p>
+          As a beta product, we may modify, suspend, or discontinue any part of the service at any
+          time.
+        </p>
+
+        <h2>Questions?</h2>
+        <p>
+          For questions about these terms during the beta, please reach out to us. Complete terms
+          of service will be published before public launch.
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <Footer />
+</Layout>

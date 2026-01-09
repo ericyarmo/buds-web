@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Privacy Policy - Buds" description="Privacy Policy for Buds app">
+  <div class="min-h-screen bg-white">
+    <!-- Header -->
+    <header class="bg-gradient-to-br from-primary-50 to-secondary-50 py-16">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <a
+          href="/"
+          class="inline-flex items-center text-primary-600 hover:text-primary-700 mb-8 transition-colors duration-200"
+        >
+          <svg
+            class="w-5 h-5 mr-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M10 19l-7-7m0 0l7-7m-7 7h18"
+            ></path>
+          </svg>
+          Back to Home
+        </a>
+        <h1 class="text-4xl md:text-5xl font-bold text-neutral-900">Privacy Policy</h1>
+        <p class="text-neutral-600 mt-4">Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="prose prose-lg max-w-none">
+        <div
+          class="bg-primary-50 border-l-4 border-primary-500 p-6 mb-8 rounded-r-lg"
+        >
+          <p class="text-neutral-700 mb-0">
+            <strong>Privacy-First Promise:</strong> Buds is built with privacy at its core. All your
+            memories are end-to-end encrypted, meaning only you and your friends can access them.
+            We can't see your content, and we never will.
+          </p>
+        </div>
+
+        <h2>Coming Soon</h2>
+        <p>
+          We're currently preparing our comprehensive privacy policy. As a beta product, we're
+          committed to:
+        </p>
+        <ul>
+          <li>End-to-end encryption for all your memories</li>
+          <li>No selling of your data to third parties</li>
+          <li>No advertising or tracking</li>
+          <li>Minimal data collection (only what's necessary for the app to function)</li>
+          <li>Your right to delete your data at any time</li>
+        </ul>
+
+        <h2>Data We Collect</h2>
+        <p>During the beta, we collect minimal information:</p>
+        <ul>
+          <li>Account information (email, username)</li>
+          <li>Usage data to improve the app</li>
+          <li>Crash reports to fix bugs</li>
+        </ul>
+
+        <h2>Your Content</h2>
+        <p>
+          All photos, messages, and memories you share are encrypted end-to-end. This means:
+        </p>
+        <ul>
+          <li>We cannot access your content</li>
+          <li>We cannot share your content with anyone</li>
+          <li>Only you and the friends you explicitly share with can decrypt your memories</li>
+        </ul>
+
+        <h2>Questions?</h2>
+        <p>
+          For questions about privacy during the beta, please reach out to us. A complete privacy
+          policy will be published before public launch.
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <Footer />
+</Layout>

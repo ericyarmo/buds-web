@@ -1,0 +1,6 @@
+# Robots.txt for Buds
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://budbuddy.app/sitemap.xml

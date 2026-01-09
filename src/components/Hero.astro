@@ -1,0 +1,107 @@
+---
+import CTAButton from './CTAButton.astro';
+---
+
+<section
+  class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 via-white to-secondary-50 overflow-hidden"
+>
+  <!-- Background decoration -->
+  <div class="absolute inset-0 overflow-hidden">
+    <div
+      class="absolute -top-1/2 -right-1/2 w-[1000px] h-[1000px] rounded-full bg-gradient-to-br from-primary-100/40 to-secondary-100/40 blur-3xl"
+    >
+    </div>
+    <div
+      class="absolute -bottom-1/2 -left-1/2 w-[1000px] h-[1000px] rounded-full bg-gradient-to-tr from-secondary-100/40 to-primary-100/40 blur-3xl"
+    >
+    </div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+    <!-- Logo/App Icon Placeholder -->
+    <div class="mb-8 animate-fade-in">
+      <div
+        class="w-24 h-24 mx-auto bg-gradient-to-br from-primary-500 to-secondary-500 rounded-3xl shadow-2xl flex items-center justify-center"
+      >
+        <svg
+          class="w-14 h-14 text-white"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+          ></path>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Headline -->
+    <h1
+      class="text-5xl md:text-7xl font-bold text-neutral-900 mb-6 animate-slide-up leading-tight"
+    >
+      Share memories with
+      <span class="bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
+        your closest friends
+      </span>
+    </h1>
+
+    <!-- Subheadline -->
+    <p
+      class="text-xl md:text-2xl text-neutral-600 mb-12 max-w-3xl mx-auto animate-slide-up leading-relaxed"
+      style="animation-delay: 0.1s;"
+    >
+      Create private memory jars with your inner circle. End-to-end encrypted, beautifully simple,
+      and built for the moments that matter.
+    </p>
+
+    <!-- CTA -->
+    <div class="animate-slide-up" style="animation-delay: 0.2s;">
+      <CTAButton variant="primary" size="lg" class="mb-4" />
+      <p class="text-sm text-neutral-500 mt-4">
+        Currently in private beta &middot; iOS only
+      </p>
+    </div>
+
+    <!-- Trust indicators -->
+    <div
+      class="mt-16 flex flex-wrap justify-center items-center gap-6 text-sm text-neutral-600 animate-fade-in"
+      style="animation-delay: 0.3s;"
+    >
+      <div class="flex items-center gap-2">
+        <svg class="w-5 h-5 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+          <path
+            fill-rule="evenodd"
+            d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+            clip-rule="evenodd"></path>
+        </svg>
+        <span>End-to-end encrypted</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <svg class="w-5 h-5 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+          <path
+            fill-rule="evenodd"
+            d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+            clip-rule="evenodd"></path>
+        </svg>
+        <span>Private by design</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <svg class="w-5 h-5 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+          <path
+            d="M10 12a2 2 0 100-4 2 2 0 000 4z"
+          ></path>
+          <path
+            fill-rule="evenodd"
+            d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+            clip-rule="evenodd"></path>
+        </svg>
+        <span>Ad-free forever</span>
+      </div>
+    </div>
+  </div>
+</section>

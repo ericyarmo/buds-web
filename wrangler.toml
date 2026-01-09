@@ -1,0 +1,12 @@
+name = "buds-web"
+compatibility_date = "2024-01-01"
+
+pages_build_output_dir = "dist"
+
+[env.production]
+# Your custom domain will be configured in Cloudflare Pages dashboard
+# This project will be deployed to budbuddy.app
+
+# Build configuration for Cloudflare Pages
+# Build command: npm run build
+# Output directory: dist

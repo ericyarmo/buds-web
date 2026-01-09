@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import CTAButton from '../components/CTAButton.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Buds - Share Memories with Your Closest Friends"
+  description="Create private memory jars with your inner circle. End-to-end encrypted, beautifully simple, and built for the moments that matter."
+>
+  <!-- Hero Section -->
+  <Hero />
+
+  <!-- Features Section -->
+  <div id="features">
+    <Features />
+  </div>
+
+  <!-- Final CTA Section -->
+  <section class="py-24 bg-gradient-to-br from-primary-500 to-secondary-500">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+        Ready to start sharing?
+      </h2>
+      <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+        Join the beta and create your first memory jar with friends. Available now on iOS via
+        TestFlight.
+      </p>
+      <CTAButton variant="secondary" size="lg" />
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <Footer />
+</Layout>

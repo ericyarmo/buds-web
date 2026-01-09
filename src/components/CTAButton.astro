@@ -1,0 +1,111 @@
+---
+export interface Props {
+  variant?: 'primary' | 'secondary';
+  size?: 'sm' | 'md' | 'lg';
+  class?: string;
+}
+
+const { variant = 'primary', size = 'lg', class: className = '' } = Astro.props;
+
+const TESTFLIGHT_URL = 'https://testflight.apple.com/join/PLACEHOLDER';
+
+const sizeClasses = {
+  sm: 'px-4 py-2 text-sm',
+  md: 'px-6 py-3 text-base',
+  lg: 'px-8 py-4 text-lg',
+};
+
+const variantClasses = {
+  primary: 'bg-primary-500 hover:bg-primary-600 text-white shadow-lg hover:shadow-xl',
+  secondary:
+    'bg-white hover:bg-neutral-50 text-primary-600 border-2 border-primary-500 hover:border-primary-600',
+};
+---
+
+<div id="cta-container" class={className}>
+  <!-- iOS CTA -->
+  <a
+    id="ios-cta"
+    href={TESTFLIGHT_URL}
+    class={`inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 ${sizeClasses[size]} ${variantClasses[variant]}`}
+    style="display: none;"
+  >
+    <svg
+      class="w-5 h-5 mr-2"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09997 22C7.78997 22.05 6.79997 20.68 5.95997 19.47C4.24997 17 2.93997 12.45 4.69997 9.39C5.56997 7.87 7.12997 6.91 8.81997 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"
+      ></path>
+    </svg>
+    <span>Join the Beta on TestFlight</span>
+  </a>
+
+  <!-- Android CTA -->
+  <button
+    id="android-cta"
+    type="button"
+    class={`inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 cursor-not-allowed opacity-75 ${sizeClasses[size]} ${variantClasses[variant]}`}
+    style="display: none;"
+  >
+    <svg
+      class="w-5 h-5 mr-2"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M17.523 15.341c-.759 0-1.379-.62-1.379-1.379s.62-1.379 1.379-1.379 1.379.62 1.379 1.379-.62 1.379-1.379 1.379zm-11.046 0c-.759 0-1.379-.62-1.379-1.379s.62-1.379 1.379-1.379 1.379.62 1.379 1.379-.62 1.379-1.379 1.379zm11.404-7.67l1.799-3.117c.099-.172.038-.393-.134-.492-.172-.099-.393-.038-.492.134l-1.821 3.153c-1.392-.634-2.954-.991-4.61-.991-1.657 0-3.219.357-4.61.991L6.192 4.196c-.099-.172-.32-.233-.492-.134-.172.099-.233.32-.134.492l1.799 3.117C4.921 8.991 3 11.657 3 14.738h18c0-3.081-1.921-5.747-4.365-7.067h-.754zM21 16H3v5c0 .552.448 1 1 1h16c.552 0 1-.448 1-1v-5z"
+      ></path>
+    </svg>
+    <span>Coming Soon to Android</span>
+  </button>
+
+  <!-- Web/Desktop CTA with QR code hint -->
+  <div id="web-cta" class="text-center" style="display: none;">
+    <a
+      href={TESTFLIGHT_URL}
+      class={`inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 ${sizeClasses[size]} ${variantClasses[variant]}`}
+    >
+      <svg
+        class="w-5 h-5 mr-2"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09997 22C7.78997 22.05 6.79997 20.68 5.95997 19.47C4.24997 17 2.93997 12.45 4.69997 9.39C5.56997 7.87 7.12997 6.91 8.81997 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"
+        ></path>
+      </svg>
+      <span>Download on iOS</span>
+    </a>
+    <p class="mt-4 text-sm text-neutral-600">Scan with your iPhone to download</p>
+  </div>
+</div>
+
+<script>
+  import { detectPlatform } from '../utils/platform';
+
+  function initCTA() {
+    const platform = detectPlatform();
+    const iosCTA = document.getElementById('ios-cta');
+    const androidCTA = document.getElementById('android-cta');
+    const webCTA = document.getElementById('web-cta');
+
+    if (platform === 'ios' && iosCTA) {
+      iosCTA.style.display = 'inline-flex';
+    } else if (platform === 'android' && androidCTA) {
+      androidCTA.style.display = 'inline-flex';
+    } else if (webCTA) {
+      webCTA.style.display = 'block';
+    }
+  }
+
+  // Run on page load
+  initCTA();
+
+  // Re-run on page navigation (for SPA-like behavior)
+  document.addEventListener('astro:page-load', initCTA);
+</script>
