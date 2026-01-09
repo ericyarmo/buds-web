@@ -4,42 +4,53 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Warm, friendly color palette for Buds
+        // Bud Buddy color palette - based on iOS design system
         primary: {
-          50: '#fef3f2',
-          100: '#fee5e2',
-          200: '#ffcfc9',
-          300: '#fdada3',
-          400: '#fa7d6d',
-          500: '#f15842',
-          600: '#de3a24',
-          700: '#bb2f1a',
-          800: '#9a2a1a',
-          900: '#80291c',
+          50: '#e8f3ee',
+          100: '#c2e2d3',
+          200: '#9dd1b8',
+          300: '#6fbc99',
+          400: '#52b788', // budsForest light
+          500: '#2D6A4F', // budsPrimary dark mode
+          600: '#1B4332', // budsPrimary light mode
+          700: '#163529',
+          800: '#112620',
+          900: '#0c1b16',
         },
-        secondary: {
-          50: '#fef6ee',
-          100: '#fdead6',
-          200: '#fad1ad',
-          300: '#f7b179',
-          400: '#f38743',
-          500: '#f06620',
-          600: '#e14b16',
-          700: '#ba3714',
-          800: '#942d18',
-          900: '#782816',
+        forest: {
+          light: '#52B788',
+          DEFAULT: '#40916C',
+          dark: '#2D6A4F',
         },
-        neutral: {
-          50: '#fafaf9',
-          100: '#f5f5f4',
-          200: '#e7e5e4',
-          300: '#d6d3d1',
-          400: '#a8a29e',
-          500: '#78716c',
-          600: '#57534e',
-          700: '#44403c',
-          800: '#292524',
-          900: '#1c1917',
+        purple: {
+          light: '#5A3F6B',
+          DEFAULT: '#3D2645',
+        },
+        cream: {
+          light: '#FAF7F2',
+          dark: '#1A1A1A',
+        },
+        surface: {
+          light: '#FFFFFF',
+          dark: '#252525',
+        },
+        text: {
+          primary: {
+            light: '#0F0F0F',
+            dark: '#FFFFFF',
+          },
+          secondary: {
+            light: '#4A4A4A',
+            dark: '#B0B0B0',
+          },
+        },
+        destructive: {
+          light: '#C1495B',
+          dark: '#D95F6F',
+        },
+        divider: {
+          light: '#E5E5E5',
+          dark: '#3A3A3A',
         },
       },
       fontFamily: {

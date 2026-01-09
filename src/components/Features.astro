@@ -43,10 +43,10 @@ const features = [
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Section Header -->
     <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-bold text-neutral-900 mb-4">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
         Designed for what matters
       </h2>
-      <p class="text-xl text-neutral-600 max-w-2xl mx-auto">
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
         Social media for people you actually care about. No feeds, no likes, no noise.
       </p>
     </div>
@@ -55,11 +55,11 @@ const features = [
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {
         features.map((feature) => (
-          <div class="group p-6 rounded-2xl bg-gradient-to-br from-neutral-50 to-white hover:from-primary-50 hover:to-secondary-50 transition-all duration-300 hover:shadow-lg border border-neutral-100">
+          <div class="group p-6 rounded-2xl bg-gradient-to-br from-gray-50 to-white hover:from-primary-50 hover:to-primary-100/30 transition-all duration-300 hover:shadow-lg border border-gray-100">
             <div class="mb-4">
               {feature.icon === 'jar' && (
                 <svg
-                  class="w-12 h-12 text-primary-500"
+                  class="w-12 h-12 text-primary-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -74,7 +74,7 @@ const features = [
               )}
               {feature.icon === 'lock' && (
                 <svg
-                  class="w-12 h-12 text-primary-500"
+                  class="w-12 h-12 text-primary-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -89,7 +89,7 @@ const features = [
               )}
               {feature.icon === 'photo' && (
                 <svg
-                  class="w-12 h-12 text-primary-500"
+                  class="w-12 h-12 text-primary-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -104,7 +104,7 @@ const features = [
               )}
               {feature.icon === 'bell' && (
                 <svg
-                  class="w-12 h-12 text-primary-500"
+                  class="w-12 h-12 text-primary-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -119,7 +119,7 @@ const features = [
               )}
               {feature.icon === 'heart' && (
                 <svg
-                  class="w-12 h-12 text-primary-500"
+                  class="w-12 h-12 text-primary-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -134,7 +134,7 @@ const features = [
               )}
               {feature.icon === 'users' && (
                 <svg
-                  class="w-12 h-12 text-primary-500"
+                  class="w-12 h-12 text-primary-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -148,8 +148,8 @@ const features = [
                 </svg>
               )}
             </div>
-            <h3 class="text-xl font-semibold text-neutral-900 mb-2">{feature.title}</h3>
-            <p class="text-neutral-600 leading-relaxed">{feature.description}</p>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
+            <p class="text-gray-600 leading-relaxed">{feature.description}</p>
           </div>
         ))
       }

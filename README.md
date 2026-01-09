@@ -1,6 +1,6 @@
-# Buds Web
+# Bud Buddy Web
 
-> Landing page for Buds - Share memories with your closest friends
+> Landing page for Bud Buddy - Share memories with your closest friends
 
 A fast, modern landing page built with Astro, Tailwind CSS, and deployed on Cloudflare Pages.
 
@@ -291,7 +291,7 @@ Platform detection runs client-side. Test in different browsers and devices:
 
 ## License
 
-Private project for Buds app.
+Private project for Bud Buddy app.
 
 ## Support
 
@@ -299,4 +299,4 @@ For questions or issues, please open an issue in this repository.
 
 ---
 
-Made with ❤️ for Buds
+Made with ❤️ for Bud Buddy
